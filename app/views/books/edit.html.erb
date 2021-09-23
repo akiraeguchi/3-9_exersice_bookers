@@ -2,16 +2,22 @@
 
 <%= form_with model:@book, local:true do |f| %>
 
-<h4>Tilte</h4>
-<%= f.text_field :title %>
+<div class="field">
+  <lavel>Tilte</lavel>
+  <%= f.text_field :title %>
+</div>
 
-<h4>Body</h4>
-<%= f.text_area :body %>
-
-<%= f.submit 'Update Book' %>
+<div class="field">
+  <lavel>Body</lavel>
+  <%= f.text_area :body %>
+</div>
+<div class="actions">
+  <%= f.submit 'Update Book' %>
+</div>
+<% end %>
 
 <%= link_to "Show", book_path(@book) %>
-<h4>|</h4>
+|
 <%= link_to "Back", books_path %>
 
-<% end %>
+
